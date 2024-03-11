@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+          },
+        },
+      };
+    </script>
+    <title>Tailwind CSS Hair Salon Demo Page</title>
+  </head>
+  <body>
+    <nav class="relative bg-slate-500">
+      <div class="flex py-4 justify-around items-center">
+        <div class="flex items-center space-x-20">
+          <a href="#" class="flex items-center text-2xl font-bold"
+            ><img
+              class="w-12 inline"
+              src="https://www.svgrepo.com/show/8272/woman-hair.svg"
+              alt=""
+            />Tailwind Hair Salon</a
+          >
+
+          <div class="hidden space-x-8 lg:flex">
+            <a href="#services" class="text-2xl">Services</a>
+            <a href="#gallery" class="text-2xl">Gallery</a>
+            <a href="#testimonials" class="text-2xl">Testimonials</a>
+            <a href="#contact" class="text-2xl">Contact</a>
+          </div>
+        </div>
+
+        <button
+          id="menu-btn"
+          class="block hamburger lg:hidden focus:outline-none"
+          type="button"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+
+      <div
+        id="menu"
+        class="absolute hidden md:hidden p-6 bg-slate-400 rounded-lg left-6 right-6 top-30 z-100"
+      >
+        <div
+          class="flex flex-col items-center justify-center w-full space-y-6 rounded-sm"
+        >
+          <a href="#services" class="text-2xl">Services</a>
+          <a href="#gallery" class="text-2xl">Gallery</a>
+          <a href="#testimonials" class="text-2xl">Testimonials</a>
+          <a href="#contact" class="text-2xl">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="about-us">
+      <div
+        class="relative -z-10 bg-[url(https://images.unsplash.com/photo-1600948836101-f9ffda59d250?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center h-screen"
+      >
+        <div class="size-full bg-slate-800 opacity-80"></div>
+      </div>
+      <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 text-white w-4/5"
+      >
+        <p class="text-2xl md:text-4xl mb-5">
+          Tailwild Hair Salon, nestled in the heart of Athens, invites you to
+          experience a blend of creativity and sophistication. Our skilled
+          stylists are dedicated to crafting personalized looks that reflect
+          your unique personality.
+        </p>
+        <div class="text-center">
+          <a
+            href="#"
+            class="bg-slate-500 font-bold inline-block p-5 rounded-lg text-2xl md:text-4xl text-center hover:bg-slate-700 transition-all"
+            >BOOK YOUR APPOINTMENT</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="bg-gradient-to-r from-slate-700 to-slate-500">
+        <h2 class="font-bold text-6xl p-5">Services</h2>
+
+        <div class="grid grid-rows-3 gap-5 px-5 pb-5 md:grid-flow-col">
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1533778139312-7ed11a9fc0e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class=" "
+            />
+            <div
+              class="overlay flex items-center justify-center absolute top-0 left-0 w-full h-full opacity-0 transition-all hover:opacity-80 hover:bg-slate-300"
+            >
+              <h2 class="text-4xl md:text-6xl color-white">Women's Haircut</h2>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class=" "
+            />
+            <div
+              class="overlay flex items-center justify-center absolute top-0 left-0 w-full h-full opacity-0 transition-all hover:opacity-80 hover:bg-slate-300"
+            >
+              <h2 class="text-4xl md:text-6xl color-white">Men's Haircut</h2>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1534297635766-a262cdcb8ee4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class=" "
+            />
+            <div
+              class="overlay flex items-center justify-center absolute top-0 left-0 w-full h-full opacity-0 transition-all hover:opacity-80 hover:bg-slate-300"
+            >
+              <h2 class="text-4xl md:text-6xl color-white">
+                Children's Haircut
+              </h2>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1571291903893-c6152b2efc22?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class=" "
+            />
+            <div
+              class="overlay flex items-center justify-center absolute top-0 left-0 w-full h-full opacity-0 transition-all hover:opacity-80 hover:bg-slate-300"
+            >
+              <h2 class="text-4xl md:text-6xl color-white">Hair Dye</h2>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class=" "
+            />
+            <div
+              class="overlay flex items-center justify-center absolute top-0 left-0 w-full h-full opacity-0 transition-all hover:opacity-80 hover:bg-slate-300"
+            >
+              <h2 class="text-4xl md:text-6xl color-white">Balayage</h2>
+            </div>
+          </div>
+
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1667857399215-567c78dd1b1c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class=" "
+            />
+            <div
+              class="overlay flex items-center justify-center absolute top-0 left-0 w-full h-full opacity-0 transition-all hover:opacity-80 hover:bg-slate-300"
+            >
+              <h2 class="text-4xl md:text-6xl color-white">Highlights</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="gallery">
+      <div class="bg-slate-400">
+        <h2 class="text-6xl p-5 font-bold">Gallery</h2>
+        <div class="px-5 pb-5 mx-auto grid grid-rows-3 gap-3 md:grid-flow-col">
+          <img
+            src="https://images.unsplash.com/photo-1629397685944-7073f5589754?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1583743599150-3b6048ecf084?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1595475693741-b445b025aec7?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="bg-slate-500 pb-10">
+        <h2 class="text-6xl p-5 mb-20 font-bold">Testimonials</h2>
+        <div
+          class="grid gap-x-4 gap-y-36 grid-rows-3 h-auto p-5 md:grid-flow-col"
+        >
+          <div class="p-5 bg-slate-200 relative rounded-lg">
+            <img
+              src="https://images.unsplash.com/photo-1494132494824-52f8bb6ed376?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-44 rounded-lg absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 -top-10"
+            />
+            <img
+              src="https://www.svgrepo.com/show/391656/quotes.svg"
+              class="w-12 absolute left-3 -top-8"
+            />
+            <p class="text-2xl mb-10">
+              "I've been searching for the perfect hair salon in Athens, and I'm
+              so glad I found Tailwind Hair Salon! From the moment I walked in,
+              I felt welcomed by the friendly staff. My stylist listened
+              attentively to what I wanted and delivered beyond my expectations.
+              I left feeling like a million bucks, and I've been receiving
+              compliments on my hair ever since. I can't wait to book my next
+              appointment!"
+            </p>
+            <p class="font-bold absolute text-2xl left-3 bottom-3">Jane Doe</p>
+            <img
+              src="https://www.svgrepo.com/show/391658/quote-right.svg"
+              class="w-12 absolute right-3 -bottom-8"
+            />
+          </div>
+          <div class="p-5 bg-slate-200 rounded-lg relative">
+            <img
+              src="https://images.unsplash.com/photo-1470259078422-826894b933aa?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-44 rounded-lg absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 -top-10"
+            />
+            <img
+              src="https://www.svgrepo.com/show/391656/quotes.svg"
+              class="w-12 absolute left-3 -top-8"
+            />
+            <p class="text-2xl mb-10">
+              "As someone who is always on the lookout for the latest hair
+              trends, I'm thrilled to have discovered Tailwind Hair Salon. The
+              stylists here are true artists, and they have a knack for bringing
+              my hair dreams to life. Whether it's a bold new color or a trendy
+              haircut, they always deliver impeccable results. Plus, the salon's
+              chic ambiance makes every visit a pampering experience. Highly
+              recommend!"
+            </p>
+            <p class="font-bold absolute text-2xl left-3 bottom-3">
+              Helen Black
+            </p>
+            <img
+              src="https://www.svgrepo.com/show/391658/quote-right.svg"
+              class="w-12 absolute right-3 -bottom-8"
+            />
+          </div>
+          <div class="p-5 bg-slate-200 rounded-lg relative">
+            <img
+              src="https://images.unsplash.com/photo-1594369428909-cf575675ca9a?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-44 rounded-lg absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 -top-10"
+            />
+            <img
+              src="https://www.svgrepo.com/show/391656/quotes.svg"
+              class="w-12 absolute left-3 -top-8"
+            />
+            <p class="text-2xl mb-10">
+              "I've struggled with finding a salon that understands my curly
+              hair needs, but Tailwind Hair Salon exceeded my expectations! My
+              stylist not only knew exactly how to cut and style my curls but
+              also provided invaluable tips for maintaining them at home. The
+              salon's commitment to using quality products made a noticeable
+              difference in the health and appearance of my hair. Thank you for
+              giving me the confidence to embrace my natural curls!"
+            </p>
+            <p class="font-bold absolute text-2xl left-3 bottom-3">
+              Irene Miller
+            </p>
+            <img
+              src="https://www.svgrepo.com/show/391658/quote-right.svg"
+              class="w-12 absolute right-3 -bottom-8"
+            />
+          </div>
+          <div class="p-5 bg-slate-200 rounded-lg relative">
+            <img
+              src="https://images.unsplash.com/photo-1542764824-4cdbd6c92dbe?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-44 rounded-lg absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 -top-10"
+            />
+            <img
+              src="https://www.svgrepo.com/show/391656/quotes.svg"
+              class="w-12 absolute left-3 -top-8"
+            />
+            <p class="text-2xl mb-10">
+              "I'm thrilled to have discovered Tailwind Hair Salon for all my
+              hair care needs! From the moment I stepped through the door, I was
+              greeted with warmth and professionalism. My stylist took the time
+              to listen to my hair concerns and provided expert advice on the
+              best treatments for my hair type. The salon's attention to detail
+              and commitment to using natural, high-quality products left my
+              hair feeling healthier and more vibrant than ever before. I can't
+              thank Tailwind Hair Salon enough for helping me achieve the
+              beautiful, luscious locks I've always dreamed of!"
+            </p>
+            <p class="font-bold absolute text-2xl left-3 bottom-3">
+              Anna Smith
+            </p>
+            <img
+              src="https://www.svgrepo.com/show/391658/quote-right.svg"
+              class="w-12 absolute right-3 -bottom-8"
+            />
+          </div>
+          <div class="p-5 bg-slate-200 rounded-lg relative">
+            <img
+              src="https://images.unsplash.com/photo-1602641902219-622a1b9a257a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-44 rounded-lg absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 -top-10"
+            />
+            <img
+              src="https://www.svgrepo.com/show/391656/quotes.svg"
+              class="w-12 absolute left-3 -top-8"
+            />
+            <p class="text-2xl mb-10">
+              "Finding a salon that caters to men's grooming needs can be
+              challenging, but Tailwind Hair Salon is a hidden gem! The barbers
+              here are top-notch professionals who know how to keep me looking
+              sharp and stylish. Whether I'm getting a classic haircut or a
+              modern fade, I always leave feeling confident and refreshed. Plus,
+              the relaxed atmosphere and complimentary beverages make each visit
+              enjoyable. I wouldn't trust anyone else with my hair!"
+            </p>
+            <p class="font-bold absolute text-2xl left-3 bottom-3">
+              Mike Williams
+            </p>
+            <img
+              src="https://www.svgrepo.com/show/391658/quote-right.svg"
+              class="w-12 absolute right-3 -bottom-8"
+            />
+          </div>
+          <div class="p-5 bg-slate-200 rounded-lg relative">
+            <img
+              src="https://images.unsplash.com/photo-1456327102063-fb5054efe647?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-44 rounded-lg absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 -top-10"
+            />
+            <img
+              src="https://www.svgrepo.com/show/391656/quotes.svg"
+              class="w-12 absolute left-3 -top-8"
+            />
+            <p class="text-2xl mb-10">
+              "As a guy who's always been a bit skeptical about getting
+              haircuts, I was pleasantly surprised by my experience at Tailwind
+              Hair Salon. The team here made me feel right at home from the
+              moment I walked in, and my barber took the time to understand
+              exactly what I was looking for. The attention to detail during the
+              haircut was impressive, and the end result exceeded my
+              expectations. I'll definitely be back for my next cut!"
+            </p>
+            <p class="font-bold absolute text-2xl left-3 bottom-3">
+              Eric Garcia
+            </p>
+            <img
+              src="https://www.svgrepo.com/show/391658/quote-right.svg"
+              class="w-12 absolute right-3 -bottom-8"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="bg-slate-200">
+        <h2 class="text-6xl p-5 font-bold">Contact</h2>
+
+        <div class="flex flex-col md:flex-row justify-center">
+          <div class="basis-full px-3 pb-3 md:basis-2/5">
+            <form action="#" class=" ">
+              <input
+                type="text"
+                placeholder="Last Name"
+                class="p-3 text-xl focus:outline-none bg-slate-300 block w-full mb-3"
+              />
+              <input
+                type="text"
+                placeholder="First Name"
+                class="p-3 text-xl focus:outline-none bg-slate-300 block w-full mb-3"
+              />
+              <input
+                type="text"
+                placeholder="Email"
+                class="p-3 text-xl focus:outline-none bg-slate-300 block w-full mb-3"
+              />
+              <textarea
+                class="p-3 text-xl focus:outline-none bg-slate-300 block w-full min-h-64 mb-3 resize-none"
+                placeholder="Your message"
+              ></textarea>
+              <button
+                type="submit"
+                class="p-4 font-medium bg-slate-300 rounded text-2xl hover:bg-slate-400 transition-all"
+              >
+                Send message
+              </button>
+            </form>
+          </div>
+          <div class="p-3 mx-auto md:mx-0">
+            <div>
+              <p class="font-bold">Telephone</p>
+              <p>+309999999999</p>
+            </div>
+            <div>
+              <p class="font-bold">Address</p>
+              <p>Lorem Ipsum 12, Athens</p>
+            </div>
+            <div>
+              <p class="font-bold">Time</p>
+              <p>Monday: 09:00 - 17:00</p>
+              <p>Tuesday: 09:00 - 21:00</p>
+              <p>Wednesday: 09:00 - 17:00</p>
+              <p>Thursday: 09:00 - 21:00</p>
+              <p>Friday: 09:00 - 21:00</p>
+              <p>Saturday: 09:00 - 17:00</p>
+              <p>Sunday: CLOSED</p>
+            </div>
+            <div>
+              <p class="font-bold mb-2">Social Media</p>
+              <img
+                class="w-10 inline-block mr-2"
+                src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                alt=""
+              />
+              <img
+                class="w-10 inline-block"
+                src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="p-5 text-center text-lg">
+      Copyright Thanos Koulouris &copy; 2024
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
